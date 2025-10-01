@@ -11,24 +11,24 @@ public Float setCalificacion(Float calificacion){
     this.calificacion = calificacion;
     return this.calificacion;
 }
-public String getNombre(){
+public String getNombreMateria(){
     return this.nombre;
 }
-public String setNombre(String nombre){
+public String setNombreMateria(String nombre){
     this.nombre = nombre;
     return this.nombre;
 }
-public String getCodigo(){
+public String getCodigoMateria(){
     return this.codigo;
 }
-public String setCodigo(String codigo){
+public String setCodigoMateria(String codigo){
     this.codigo = codigo;
     return this.codigo;
 }
-public Integer getCredito(){
+public Integer getCreditoMateria(){
     return this.credito;
 }
-public Integer setCredito(Integer credito){
+public Integer setCreditoMateria(Integer credito){
     this.credito = credito;
     return this.credito = credito;
 }

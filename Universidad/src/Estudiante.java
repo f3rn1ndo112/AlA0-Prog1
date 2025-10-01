@@ -4,6 +4,7 @@ public class Estudiante {
     private String apellido;
     private String carrera;
     private Float promedio;
+    private Materia[] materias;
 
 public Integer getEdad(){
     return this.edad;
@@ -54,14 +55,24 @@ public String setCarrera(String carrera){
 public Float getPromedio(){
     return this.promedio;
 }
-public Float setPromedio(Float promedio){
-    if (promedio < 0 || promedio > 10){
-        System.out.println("promedio no valido");
-        promedio = -1f;
-        return this.promedio;
-    } else {
-        this.promedio = promedio;
-        return this.promedio;
+public Float setPromedio(Materia[] materias){
+    Float suma = 0.0f;
+    for (int i = 0; i < materias.length; i++){
+        suma += materias[i].getCalificacion();
     }
+    this.promedio = suma / materias.length;
+    if (this.promedio < 0.0f || this.promedio > 10.0f){
+        System.out.println("promedio no valido");
+        this.promedio = -1.0f;
+    }
+    return this.promedio;
+}
+
+public Materia[] getMaterias(){
+    return this.materias;
+}
+public Materia[] agregarMaterias(Materia[] materias){
+    this.materias = materias;
+    return this.materias;
 }
 }
